@@ -4,19 +4,10 @@
     <!-- Carregando dois scripts react de um site externo, para poder utilizar react -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script type="text/javascript">
-      // Acessado o elemento que possiu o id igual a App
+    <script>
       const app = document.getElementById('app');
-      // Criando um elemento h1
-      const header = document.createElement('h1');
-      // Armazenando um testo na const text
-      const text = 'Develop. Preview. Ship.';
-      // Criando um no texto na variavel headerContent
-      const headerContent = document.createTextNode(text);
-      // Adicionando no de texto como filho do h1
-      header.appendChild(headerContent);
-      // adicionado o header como filho do div.
-      app.appendChild(header)
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
     </script>
   </body>
 </html>
