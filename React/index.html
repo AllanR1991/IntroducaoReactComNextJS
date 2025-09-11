@@ -13,10 +13,19 @@
         return <h1>{title}</h1>
       }
       function HomePage(){
-        
+        const nomes = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
+
+        function handleClick() {
+          console.log("increment like count");
+        }
         return (<div> 
-          <Header title="React"/>
-          <Header title="A new Title"/>
+          <Header title="Develop. Preview. Ship"/>
+          <ul>
+            {nomes.map((nome)=>(
+              <li key={nome}>{nome}</li>
+        ))}
+          </ul>
+          <button onClick={handleClick}>Like</button>
         </div>)
       }
       const root = ReactDOM.createRoot(app);
